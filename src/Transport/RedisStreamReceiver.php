@@ -114,7 +114,7 @@ class RedisStreamReceiver implements ReceiverInterface
 
                         if (!empty($pendingMessages)) {
                             // TODO Use logger
-                            echo '[' . (new \DateTimeImmutable())->format('Y-m-d H:i:s' . '] Claimed messages from ' . $name . PHP_EOL;
+                            echo '[' . (new \DateTimeImmutable())->format('Y-m-d H:i:s') . '] Claimed messages from ' . $name . PHP_EOL;
 
                             $this->handleMessages([$key => $this->redis->xClaim($key, $this->group, $this->consumer, self::MIN_IDLE_TIME, array_map(function ($message) {
                                 return $message[0];

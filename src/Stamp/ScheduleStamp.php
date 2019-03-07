@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Agoat\RedisTransport\Transport;
+namespace Agoat\RedisTransport\Stamp;
 
 
 use Symfony\Component\Messenger\Stamp\StampInterface;

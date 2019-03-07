@@ -1,0 +1,18 @@
+{
+    "name": "agoat/redis-transport",
+    "description": "A Symfony messenger transport adapter for redis streams with support for scheduling",
+    "type": "library",
+    "require": {
+        "php": "^7.1",
+        "ext-redis": "*",
+        "symfony/messenger": "^4.2",
+        "symfony/serializer": "^4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arne Stappen (alias aGoat)",
+            "email": "mehh@agoat.xyz"
+        }
+    ]
+}

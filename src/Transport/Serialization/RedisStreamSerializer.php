@@ -1,6 +1,6 @@
 <?php
 
-namespace Ospa\CloudCore\Transport\Serialization;
+namespace Agoat\RedisTransport\Transport\Serialization;
 
 
 use Symfony\Component\Messenger\Envelope;
