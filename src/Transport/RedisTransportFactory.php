@@ -3,7 +3,7 @@
 namespace Agoat\RedisTransport\Transport;
 
 
-use Agoat\RedisTransport\Serializer\RedisStreamSerializer;
+use Agoat\RedisTransport\Transport\Serialization\RedisStreamSerializer;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
 use Symfony\Component\Messenger\Transport\TransportFactoryInterface;
 use Symfony\Component\Messenger\Transport\TransportInterface;
