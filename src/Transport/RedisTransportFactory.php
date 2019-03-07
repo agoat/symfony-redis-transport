@@ -37,7 +37,7 @@ class RedisTransportFactory implements TransportFactoryInterface
         $channel = $options['channel'] ?? 'default';
         $group = $options['group'] ?? 'default';
         $consumer = $options['consumer'] ?? \gethostname();
-        $namespace = $options['namespace'] ?? 'ns';
+        $namespace = $options['namespace'] ?? 'message';
         $timeout = $options['timeout'] ?? 30;
         $count = $options['count'] ?? 1;
 
