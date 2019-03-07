@@ -4,6 +4,7 @@ namespace Agoat\RedisTransport\Transport;
 
 
 use Agoat\RedisTransport\Transport\Serialization\RedisStreamSerializer;
+use Symfony\Component\Cache\Adapter\RedisAdapter;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
 use Symfony\Component\Messenger\Transport\TransportFactoryInterface;
 use Symfony\Component\Messenger\Transport\TransportInterface;
@@ -40,7 +41,7 @@ class RedisTransportFactory implements TransportFactoryInterface
         $timeout = $options['timeout'] ?? 30;
         $count = $options['count'] ?? 1;
 
-        return new RedisStreamTransport(\Redis::createConnection($dsn, $options), $namespace, $this->serializer, $channel, $group, $consumer, $timeout, $count);
+        return new RedisStreamTransport(RedisAdapter::createConnection($dsn, $options), $namespace, $this->serializer, $channel, $group, $consumer, $timeout, $count);
     }
 
     public function supports(string $dsn, array $options): bool
