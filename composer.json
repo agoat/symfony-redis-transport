@@ -12,8 +12,7 @@
     "require": {
         "php": "^7.1",
         "ext-redis": "*",
-        "symfony/messenger": "^4.2",
-        "symfony/serializer": "^4.0"
+        "symfony/messenger": "^4.2"
     },
     "autoload": {
         "psr-4": { "Agoat\\RedisTransport\\": "src" },
