@@ -13,7 +13,9 @@
         "php": "^7.1",
         "ext-redis": "*",
         "symfony/messenger": "^4.2",
-        "symfony/cache": "^4.2"
+        "symfony/cache": "^4.2",
+        "symfony/serializer": "^4.2",
+        "symfony/property-access": "^4.2"
     },
     "autoload": {
         "psr-4": { "Agoat\\RedisTransport\\": "src" },
