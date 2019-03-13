@@ -7,7 +7,7 @@ use Symfony\Component\Messenger\Stamp\StampInterface;
 
 class TransmissionStamp implements StampInterface
 {
-    private const DATETIME_FORMAT = \DateTimeInterface::RFC3339;
+    private const DATETIME_FORMAT = \DateTimeImmutable::RFC3339;
 
     private $transmissionDate;
 
