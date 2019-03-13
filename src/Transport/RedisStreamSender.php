@@ -4,6 +4,9 @@
 namespace Agoat\RedisTransport\Transport;
 
 
+use Agoat\RedisTransport\Stamp\HighPriorityStamp;
+use Agoat\RedisTransport\Stamp\ScheduleStamp;
+use Agoat\RedisTransport\Stamp\TransmissionStamp;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Transport\Sender\SenderInterface;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
