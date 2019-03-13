@@ -7,16 +7,18 @@ use Symfony\Component\Messenger\Stamp\StampInterface;
 
 class TransmissionStamp implements StampInterface
 {
+    private const DATETIME_FORMAT = \DateTimeInterface::RFC3339;
+
     private $transmissionDate;
 
 
-    public function __construct()
+    public function __construct($transmissionDate = null)
     {
-        $this->transmissionDate = new \DateTimeImmutable('now');
+        $this->transmissionDate = $transmissionDate ?? (new \DateTimeImmutable('now'))->format(self::DATETIME_FORMAT);
     }
 
     public function getTransmissionDate(): \DateTimeImmutable
     {
-        return $this->transmissionDate;
+        return \DateTimeImmutable::createFromFormat(self::DATETIME_FORMAT, $this->transmissionDate);
     }
 }
